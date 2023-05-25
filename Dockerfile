@@ -5,6 +5,8 @@ USER root
 
 ARG CONDA_DIR="/opt/conda"
 
+ENV PATH="$CONDA_DIR/bin:$PATH"
+
 RUN mkdir /tmp/miniconda
 WORKDIR /tmp/miniconda
 RUN curl https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -L -o miniconda.sh && \
